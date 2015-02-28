@@ -42,3 +42,5 @@ From `man docker` description:
        The Docker CLI has over 30 commands. The commands are listed below and each has its own  man  page
        which explain usage and arguments.
  ```
+
+Docker documentation `docker [CMD] -h`
