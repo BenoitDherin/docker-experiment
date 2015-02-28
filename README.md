@@ -71,4 +71,12 @@ Each time a container is run/created, a subtree of the linux DAG image becomes p
 
 docker run <image> will create a new container. To access a previously created container, docker attach <container-id>.
 
+Installing stuff withing a running container adds branches and nodes to the image tree that led to that initial container. Now to serialize that into the docker image tree:
 
+```
+docker commit <active-container-id> <given-name-for-that-container>
+
+docker commit $(docker ps -q) ubuntu-with-my-stuff-installed
+```
+
+The latter command provided that you only have one running container.
