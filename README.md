@@ -62,3 +62,13 @@ docker images
 docker pull
 docker rmi
 ```
+
+Pulling a images will pull the whole DAG of "kind of linux kernel patches" (the git way) from the linux kernel running on the host machine into the fully configured image leaf. 
+
+Each time a new image is pulled, the image DAG growth.
+
+Each time a container is run/created, a subtree of the linux DAG image becomes protected, and can be removed (i.e. the corresponding image (i.e. subtree) deleted with docker rmi <image-name> only if all the dependent containers have been removed first (with docker rm container-id). 
+
+docker run <image> will create a new container. To access a previously created container, docker attach <container-id>.
+
+
