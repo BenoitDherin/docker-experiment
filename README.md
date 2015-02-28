@@ -49,7 +49,7 @@ Docker documentation `docker [CMD] -h`
 ###Container commands
 
 ```
-docker ps
+docker ps (-aq)
 docker run
 docker rm
 docker attach
@@ -58,7 +58,7 @@ docker attach
 ###Images commands
 
 ```
-docker images
+docker images (-v --tree)
 docker pull
 docker rmi
 ```
