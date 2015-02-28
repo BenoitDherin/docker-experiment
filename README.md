@@ -44,3 +44,21 @@ From `man docker` description:
  ```
 
 Docker documentation `docker [CMD] -h`
+
+
+###Container commands
+
+```
+docker ps
+docker run
+docker rm
+docker attach
+```
+
+###Images commands
+
+```
+docker images
+docker pull
+docker rmi
+```
